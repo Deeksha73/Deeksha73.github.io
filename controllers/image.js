@@ -22,6 +22,6 @@ const handleApiCall = (req,res) => {
 	.catch(err => res.status(400).json('unable to get entries'));
 }
 module.exports = {
-	handleImagePut: handleImagePut,
-	handleApiCall: handleApiCall
+handleImagePut,
+handleApiCall
 }
