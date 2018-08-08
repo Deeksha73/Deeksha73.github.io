@@ -6,11 +6,9 @@ const handleApiCall = (req,res) => {
  .then(data => {
  	res.json(data);
  })
-<<<<<<< HEAD
- .catch(err => res.status(400).json('error'))
-=======
+
  .catch(err=> res.status(400).json('error'))
->>>>>>> fbe674c77e28e5c2ae0534934aee83c9c3717834
+
 }
 
  const handleImagePut = (req,res,knex)=>{
