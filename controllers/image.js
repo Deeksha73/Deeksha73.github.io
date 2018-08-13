@@ -6,7 +6,7 @@ const handleApiCall = (req,res) => {
  .then(data => {
  	res.json(data);
  })
- .catch(err=> res.status(400).json('error'))
+ .catch(err=> res.status(400).json('error in detecting'))
 }
 
  const handleImagePut = (req,res,knex)=>{
