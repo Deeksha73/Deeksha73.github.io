@@ -4,7 +4,7 @@ const handleSignin = (req,res,knex,bcrypt)=>{
     return res.status(400).json('incorrect format');
   }
  knex.select('email','hash').from('login')
-  .where('email','=',email)
+  .where('email','=',email) 
   .then(data=>{
   	const isValid=bcrypt.compareSync(password,data[0].hash);
   	if(isValid){

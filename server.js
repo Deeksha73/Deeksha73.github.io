@@ -5,7 +5,7 @@ const cors = require('cors');
 const register = require('./controllers/register.js');
 const signin = require('./controllers/signin.js');
 const profile = require('./controllers/profile.js');
-const image = require('./controllers/image.js')
+const image = require('./controllers/image.js');
 var knex = require('knex')({
   client: 'pg',
   connection: {
@@ -24,6 +24,6 @@ app.put('/image', (req,res) => {image.handleImagePut(req,res,knex)});
 app.post('/imageurl', (req,res) => {image.handleApiCall(req,res)});
 
 
-app.listen(process.env.PORT || 3000,()=>{
+app.listen( 3001,()=>{
 	console.log('port active');
 });
